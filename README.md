@@ -12,17 +12,17 @@ Full private codebases stay private by design. The public repositories below are
 
 | Repository | What it demonstrates | Architecture / evidence | Verification in repo |
 |---|---|---|---|
-| **[agent-policy-core](https://github.com/Niyam-Paneru/agent-policy-core)** | Deny-by-default policy for tool-calling agents, expiring permissions, idempotency, ambiguous-effect blocking, and write-time credential redaction. | [architecture](https://github.com/Niyam-Paneru/agent-policy-core/blob/main/docs/architecture.svg) | 28 test cases + GitHub Actions workflow |
-| **[voice-pipeline-guard](https://github.com/Niyam-Paneru/voice-pipeline-guard)** | Bounded audio capture, explicit rejection reasons, fail-closed latency budgets, and metadata-only metrics. | [architecture](https://github.com/Niyam-Paneru/voice-pipeline-guard/blob/main/docs/architecture.svg) | 16 test cases + GitHub Actions workflow |
-| **[human-gated-research](https://github.com/Niyam-Paneru/human-gated-research)** | Evidence-ranked proposals and content-bound human approval before irreversible actions. | [architecture](https://github.com/Niyam-Paneru/human-gated-research/blob/main/docs/architecture.svg) | 14 test cases + GitHub Actions workflow |
-| **[metric-integrity](https://github.com/Niyam-Paneru/metric-integrity)** | Denominator-safe reporting, measured/modelled basis labels, and refusal of unsupported attribution. | [architecture](https://github.com/Niyam-Paneru/metric-integrity/blob/main/docs/architecture.svg) | 14 test cases + GitHub Actions workflow |
+| **[agent-policy-core](https://github.com/Niyam-Paneru/agent-policy-core)** | Deny-by-default policy for tool-calling agents, expiring permissions, idempotency, ambiguous-effect blocking, and write-time credential redaction. | [architecture](https://github.com/Niyam-Paneru/agent-policy-core/blob/main/docs/architecture.svg) | 28 test cases · CircleCI |
+| **[voice-pipeline-guard](https://github.com/Niyam-Paneru/voice-pipeline-guard)** | Bounded audio capture, explicit rejection reasons, fail-closed latency budgets, and metadata-only metrics. | [architecture](https://github.com/Niyam-Paneru/voice-pipeline-guard/blob/main/docs/architecture.svg) | 16 test cases · CircleCI |
+| **[human-gated-research](https://github.com/Niyam-Paneru/human-gated-research)** | Evidence-ranked proposals and content-bound human approval before irreversible actions. | [architecture](https://github.com/Niyam-Paneru/human-gated-research/blob/main/docs/architecture.svg) | 14 test cases · CircleCI |
+| **[metric-integrity](https://github.com/Niyam-Paneru/metric-integrity)** | Denominator-safe reporting, measured/modelled basis labels, and refusal of unsupported attribution. | [architecture](https://github.com/Niyam-Paneru/metric-integrity/blob/main/docs/architecture.svg) | 14 test cases · CircleCI |
 | **[dentsignal-twilio-evidence](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence)** | Sanitized historical Twilio voice, webhook, number-provisioning, callback, SMS, and migration evidence from DentSignal. | [evidence pack](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence) | Source/history pack with private commit provenance |
 
 ---
 
 ## Stack I use
 
-**Python / FastAPI · JavaScript / TypeScript / Node.js · React / Next.js · PostgreSQL / SQLite · Redis / Celery · Playwright / Puppeteer · GitHub Actions**
+**Python / FastAPI · JavaScript / TypeScript / Node.js · React / Next.js · PostgreSQL / SQLite · Redis / Celery · Playwright / Puppeteer · CircleCI / GitHub Actions**
 
 I care about verification as much as implementation: tests, explicit failure states, idempotency, bounded side effects, privacy boundaries, observability, and documentation that separates what is proven from what is still unknown.
 
