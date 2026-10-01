@@ -2,18 +2,18 @@
 
 **Backend systems · AI automation · voice/realtime · reliable agent workflows**
 
-I build software that connects AI to real actions: browsers, calendars, voice pipelines, APIs, and remote compute.
+I build software that connects AI to real actions: browsers, booking workflows, voice pipelines, APIs, and remote compute.
 The common thread is explicit state, bounded permissions, and failure handling that does not quietly turn uncertainty into success.
 
 ## Selected work
 
 | Project | What it shows |
 | --- | --- |
-| **[agent-policy-core](https://github.com/Niyam-Paneru/agent-policy-core)** | Deny-by-default tool policy with expiring grants, effect-state checks, idempotency, and redacted audit evidence. |
+| **[agent-policy-core](https://github.com/Niyam-Paneru/agent-policy-core)** | Deny-by-default tool policy with reviewed permission boundaries, stale-evidence narrowing, idempotency, and redacted audit evidence. |
 | **[attended-browser-bridge](https://github.com/Niyam-Paneru/attended-browser-bridge)** | Public control core for attended browser automation: fresh snapshots, bounded writes, and explicit handling for ambiguous effects. |
-| **[ai-booking-workflow](https://github.com/Niyam-Paneru/ai-booking-workflow)** | Deterministic booking flow that only offers provider-backed slots, confirms the selected slot, and hands off when confidence is low. |
+| **[ai-booking-workflow](https://github.com/Niyam-Paneru/ai-booking-workflow)** | Deterministic booking flow that only confirms a slot previously supplied to and offered by the workflow, with human handoff on uncertainty. |
 | **[voice-pipeline-guard](https://github.com/Niyam-Paneru/voice-pipeline-guard)** | Bounded audio validation and latency gates for realtime voice paths, including suppression when completion timing is unknown or over budget. |
-| **[ubuntu-phone-compute-bridge](https://github.com/Niyam-Paneru/ubuntu-phone-compute-bridge)** | Windows-to-Android/Ubuntu job execution with a fixed job registry, structured results, and artifact integrity checks. |
+| **[ubuntu-phone-compute-bridge](https://github.com/Niyam-Paneru/ubuntu-phone-compute-bridge)** | Bounded Windows-to-phone compute protocol with named jobs, structured result validation, and artifact integrity checks. |
 
 ## What I build
 
