@@ -1,120 +1,76 @@
-<p align="center">
-  <img src="./assets/profile-header.svg" alt="Niyam Paneru — backend systems, AI automation, realtime voice, reliability" width="100%" />
-</p>
+# Niyam Paneru
 
-<p align="center">
-  <a href="https://niyampaneru.me"><img alt="Website" src="https://img.shields.io/badge/niyampaneru.me-111827?style=for-the-badge&logo=vercel&logoColor=white"></a>
-  <a href="mailto:niyampaneru79@gmail.com"><img alt="Email" src="https://img.shields.io/badge/email-111827?style=for-the-badge&logo=gmail&logoColor=white"></a>
-  <img alt="CircleCI verified" src="https://img.shields.io/badge/CI-CircleCI-343434?style=for-the-badge&logo=circleci&logoColor=white">
-</p>
+I build software, then immediately ask it uncomfortable questions.
 
-## I build the parts that have to be right
+`backend` · `AI agents` · `voice` · `automation` · `evaluation` · `weird side projects that somehow become serious`
 
-I am a software developer focused on **backend systems, AI automation, realtime voice, and reliable agent workflows**.
+> “What happens if this runs twice?” is basically my love language.
 
-My favorite problems are the ones where the happy path is easy but the failure path matters: permissions expire, side effects become ambiguous, latency breaks the budget, data is incomplete, or an agent needs to know when **not** to act.
+I care about systems that can explain **why** they acted, **why not**, and what happens when the network, model, browser, caller, calendar, or human does something annoying.
 
-```text
-input → evidence → policy → action → proof
+## If you only click four things
+
+| | Project | What is interesting about it |
+|---|---|---|
+| 📞 | **[ai-booking-workflow](https://github.com/Niyam-Paneru/ai-booking-workflow)** | A booking FSM that can offer and confirm a real slot without inventing one because the conversation got awkward. |
+| 🖱️ | **[attended-browser-bridge](https://github.com/Niyam-Paneru/attended-browser-bridge)** | Browser-write policy where “maybe it clicked” means **stop**, not “click harder.” |
+| 🧠 | **[temporal-memory-core](https://github.com/Niyam-Paneru/temporal-memory-core)** | Personal-memory retrieval with valid time, knowledge time, supersession, and use permissions. |
+| 📱 | **[ubuntu-phone-compute-bridge](https://github.com/Niyam-Paneru/ubuntu-phone-compute-bridge)** | Windows → SSH → Termux → Ubuntu jobs on an Android phone, with a tiny allowlist and result verification. |
+
+## Voice, agents, and things that are allowed to say “no”
+
+- **[ai-sales-call-guard](https://github.com/Niyam-Paneru/ai-sales-call-guard)** — default-deny gates around AI sales-call experiments: DNC, disclosure, self-test allowlists, daily caps, and no-PHI boundaries.
+- **[agent-policy-core](https://github.com/Niyam-Paneru/agent-policy-core)** — expiring grants, idempotency, ambiguous-effect blocking, credential redaction.
+- **[voice-pipeline-guard](https://github.com/Niyam-Paneru/voice-pipeline-guard)** — bounded audio and latency/failure rules for realtime voice.
+- **[human-gated-research](https://github.com/Niyam-Paneru/human-gated-research)** — irreversible actions stay behind human approval tied to the exact content.
+- **[dentsignal-twilio-evidence](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence)** — sanitized historical telephony evidence from DentSignal.
+
+## Memory, learning, and not lying to ourselves
+
+- **[learning-evidence-core](https://github.com/Niyam-Paneru/learning-evidence-core)** — assisted practice is useful; it is not silently renamed “mastery.”
+- **[metric-integrity](https://github.com/Niyam-Paneru/metric-integrity)** — measured/modelled labels, denominator-safe reporting, unsupported-attribution refusal.
+- **[opportunity-intelligence-core](https://github.com/Niyam-Paneru/opportunity-intelligence-core)** — public opportunity evidence → hard gates → deterministic scoring → proof plan → human review.
+
+## One weird one, because software should occasionally be fun
+
+**[relic-zero](https://github.com/Niyam-Paneru/relic-zero)** — one panda relic, one-use invitation links, immutable bless/corrupt history, and no automatic forwarding.
+
+Yes, this is a real repository. No, the panda does not have a blockchain.
+
+## How I usually work
+
+```mermaid
+flowchart LR
+    A[Problem] --> B[Smallest credible proof]
+    B --> C[Try to break it on purpose]
+    C --> D{Evidence good enough?}
+    D -- no --> E[Rewrite / kill / narrow]
+    E --> B
+    D -- yes --> F[Ship the bounded version]
+    F --> G[Measure what actually happened]
 ```
 
-Public repositories below are intentionally small, reviewable proofs. Larger systems stay private when publishing them would expose credentials, personal data, or operational details.
+I would rather kill a weak idea early than spend a month making its dashboard prettier.
 
-## Featured systems
+## Bigger projects behind the public slices
 
-<table>
-<tr>
-<td width="50%" valign="top">
+- **Niyam AI** — long-running personal-AI work: typed memory, provenance, temporal retrieval, evals, model adapters, and current Kaggle experiments.
+- **Niyam Learning OS** — evidence-backed learning, RS-1 decision practice, CS/AI labs, English, local-first state, and a live app: **[open it](https://niyam-learning-os.niyampaneru79.workers.dev)**.
+- **Browser Bridge** — attended Chrome control with fresh snapshots, bounded writes, recovery, and audit trails.
+- **DentSignal** — historical AI voice/receptionist system spanning telephony, Deepgram voice, booking, handoff, and guarded sales-call experiments.
 
-### 🛡️ [agent-policy-core](https://github.com/Niyam-Paneru/agent-policy-core)
+Private code stays private when publishing it would expose personal data, credentials, operational state, or a giant repo that makes review harder instead of easier. The public repos are the parts worth inspecting without needing a treasure map.
 
-Deny-by-default policy for tool-calling agents with expiring permissions, idempotency, ambiguous-effect blocking, and credential redaction.
+## Tools I actually use
 
-**Node.js · 28 tests · CircleCI**
+**Python, FastAPI, JavaScript, TypeScript, Node.js, React, Next.js, PostgreSQL, SQLite, Redis, Celery, Playwright, Puppeteer, CircleCI, Azure, Cloudflare, Supabase.**
 
-[Architecture](https://github.com/Niyam-Paneru/agent-policy-core/blob/main/docs/architecture.svg)
-
-</td>
-<td width="50%" valign="top">
-
-### 🎙️ [voice-pipeline-guard](https://github.com/Niyam-Paneru/voice-pipeline-guard)
-
-Bounded audio capture, explicit rejection reasons, fail-closed latency budgets, and metadata-only metrics for realtime voice pipelines.
-
-**Python · 16 tests · CircleCI**
-
-[Architecture](https://github.com/Niyam-Paneru/voice-pipeline-guard/blob/main/docs/architecture.svg)
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🔐 [human-gated-research](https://github.com/Niyam-Paneru/human-gated-research)
-
-Evidence-ranked proposals where irreversible actions require digest-matched human approval.
-
-**Python · 14 tests · CircleCI**
-
-[Architecture](https://github.com/Niyam-Paneru/human-gated-research/blob/main/docs/architecture.svg)
-
-</td>
-<td width="50%" valign="top">
-
-### 📊 [metric-integrity](https://github.com/Niyam-Paneru/metric-integrity)
-
-Denominator-safe reporting, measured/modelled basis labels, and refusal of unsupported attribution.
-
-**Python · 14 tests · CircleCI**
-
-[Architecture](https://github.com/Niyam-Paneru/metric-integrity/blob/main/docs/architecture.svg)
-
-</td>
-</tr>
-</table>
-
-### ☎️ [dentsignal-twilio-evidence](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence)
-
-A sanitized historical evidence pack from DentSignal covering Twilio voice, webhooks, number provisioning, callbacks, SMS, and later telephony migration work.
-
----
-
-## What I am building
-
-| Project | Focus | Current shape |
-|---|---|---|
-| **Niyam AI** | Long-term personal AI with typed memory, provenance, retrieval boundaries, temporal validity, evals, and replaceable model adapters | Private engineering lab |
-| **Niyam Learning OS** | Evidence-backed learning, adaptive sessions, RS-1 decision practice, English, CS/AI labs, and local-first learner state | [Live app](https://niyam-learning-os.niyampaneru79.workers.dev) |
-| **Browser Bridge** | Local attended browser control with strict policy, idempotency, ambiguous-effect handling, and audit trails | Private control-plane project |
-
-## Stack
-
-<p>
-  <img src="https://img.shields.io/badge/Python-111827?style=flat-square&logo=python&logoColor=3776AB" alt="Python">
-  <img src="https://img.shields.io/badge/FastAPI-111827?style=flat-square&logo=fastapi&logoColor=009688" alt="FastAPI">
-  <img src="https://img.shields.io/badge/JavaScript-111827?style=flat-square&logo=javascript&logoColor=F7DF1E" alt="JavaScript">
-  <img src="https://img.shields.io/badge/TypeScript-111827?style=flat-square&logo=typescript&logoColor=3178C6" alt="TypeScript">
-  <img src="https://img.shields.io/badge/Node.js-111827?style=flat-square&logo=nodedotjs&logoColor=5FA04E" alt="Node.js">
-  <img src="https://img.shields.io/badge/React-111827?style=flat-square&logo=react&logoColor=61DAFB" alt="React">
-  <img src="https://img.shields.io/badge/Next.js-111827?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js">
-  <img src="https://img.shields.io/badge/PostgreSQL-111827?style=flat-square&logo=postgresql&logoColor=4169E1" alt="PostgreSQL">
-  <img src="https://img.shields.io/badge/Redis-111827?style=flat-square&logo=redis&logoColor=FF4438" alt="Redis">
-  <img src="https://img.shields.io/badge/Playwright-111827?style=flat-square&logo=playwright&logoColor=2EAD33" alt="Playwright">
-  <img src="https://img.shields.io/badge/CircleCI-111827?style=flat-square&logo=circleci&logoColor=white" alt="CircleCI">
-</p>
-
-## Engineering rules I care about
-
-- **Evidence over claims** — tests, logs, provenance, and explicit limitations.
-- **Fail closed** — uncertain permissions or side effects should not silently continue.
-- **Human authority** — irreversible agent actions need a clear approval boundary.
-- **Measured before modelled** — do not turn assumptions into metrics.
-- **Privacy by design** — publish useful proof without leaking private operational state.
+Also C, whenever I want the computer to remind me that memory has consequences.
 
 ## Case studies
 
-**[niyampaneru.me](https://niyampaneru.me)** has architecture walkthroughs and larger project case studies with the problem, system shape, implementation, evidence, and limitations.
+**[niyampaneru.me](https://niyampaneru.me)** — larger project walkthroughs, architecture, evidence, and limitations.
 
-<p align="center">
-  <b>Build → verify → expose the proof → keep the sensitive parts private.</b>
-</p>
+## Contact
+
+**[niyampaneru.me](https://niyampaneru.me)** · **[niyampaneru79@gmail.com](mailto:niyampaneru79@gmail.com)**
