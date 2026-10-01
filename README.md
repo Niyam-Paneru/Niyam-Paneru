@@ -39,16 +39,7 @@ Yes, this is a real repository. No, the panda does not have a blockchain.
 
 ## How I usually work
 
-```mermaid
-flowchart LR
-    A[Problem] --> B[Smallest credible proof]
-    B --> C[Try to break it on purpose]
-    C --> D{Evidence good enough?}
-    D -- no --> E[Rewrite / kill / narrow]
-    E --> B
-    D -- yes --> F[Ship the bounded version]
-    F --> G[Measure what actually happened]
-```
+![Evidence-first workflow](assets/how-i-work.svg)
 
 I would rather kill a weak idea early than spend a month making its dashboard prettier.
 
