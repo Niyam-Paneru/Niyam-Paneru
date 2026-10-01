@@ -1,43 +1,36 @@
 # Niyam Paneru
 
-**Backend and AI automation engineer. I build the parts agents skip.**
+**Software developer focused on backend systems, AI automation, realtime voice, and reliable agent workflows.**
 
-Most of my work sits in the seams: what an autonomous system is allowed to do, how
-it proves it did only that, and what it refuses to claim it knows.
+I build systems where the hard part is not only making the happy path work, but defining what happens when permissions expire, side effects are ambiguous, latency blows the budget, or the available data cannot support the metric someone wants.
 
-- Policy gates that can only narrow permissions, never widen them at runtime.
-- Effects that fail closed — including the ones whose outcome is *unknown*.
-- Capture bounds that limit the read, not just the buffer.
-- Metrics that carry their denominator, and attribution that is refused rather
-  than estimated.
+Full private codebases stay private by design. The public repositories below are **small, sanitized proofs derived from project work** so the core behavior can be reviewed quickly without exposing credentials, customer data, or private operational code.
 
 ---
 
-## Public work
+## Selected public work
 
-Each repository is a sanitised extract from private production systems. Zero
-runtime dependencies, runs in under a second, and the tests are the argument.
-
-| | Repository | What it demonstrates | Tests |
+| Repository | What it demonstrates | Architecture / evidence | Verification in repo |
 |---|---|---|---|
-| 1 | **[agent-policy-core](https://github.com/Niyam-Paneru/agent-policy-core)** | A deny-by-default gate for tool-calling agents. Exact-origin targeting, permissions that expire after 90 days, and idempotent effects where an *ambiguous* outcome is a block rather than a retry. | 28 |
-| 2 | **[voice-pipeline-guard](https://github.com/Niyam-Paneru/voice-pipeline-guard)** | Bounded audio capture and a fail-closed latency gate. An over-budget stage has *failed*, and no measurement at all is also not a pass. | 16 |
-| 3 | **[human-gated-research](https://github.com/Niyam-Paneru/human-gated-research)** | Evidence-ranked proposals where every irreversible action needs a human approval bound to a content **digest**, not an identifier — so an approved plan cannot be quietly repointed at a different target. | 14 |
-| 4 | **[metric-integrity](https://github.com/Niyam-Paneru/metric-integrity)** | Denominator-safe reporting. Every figure carries its basis; modelled estimates cannot reach a quote; recovered revenue is reported as *unavailable* when no durable join exists. | 14 |
+| **[agent-policy-core](https://github.com/Niyam-Paneru/agent-policy-core)** | Deny-by-default policy for tool-calling agents, expiring permissions, idempotency, ambiguous-effect blocking, and write-time credential redaction. | [architecture](https://github.com/Niyam-Paneru/agent-policy-core/blob/main/docs/architecture.svg) | 28 test cases · CircleCI |
+| **[voice-pipeline-guard](https://github.com/Niyam-Paneru/voice-pipeline-guard)** | Bounded audio capture, explicit rejection reasons, fail-closed latency budgets, and metadata-only metrics. | [architecture](https://github.com/Niyam-Paneru/voice-pipeline-guard/blob/main/docs/architecture.svg) | 16 test cases · CircleCI |
+| **[human-gated-research](https://github.com/Niyam-Paneru/human-gated-research)** | Evidence-ranked proposals and content-bound human approval before irreversible actions. | [architecture](https://github.com/Niyam-Paneru/human-gated-research/blob/main/docs/architecture.svg) | 14 test cases · CircleCI |
+| **[metric-integrity](https://github.com/Niyam-Paneru/metric-integrity)** | Denominator-safe reporting, measured/modelled basis labels, and refusal of unsupported attribution. | [architecture](https://github.com/Niyam-Paneru/metric-integrity/blob/main/docs/architecture.svg) | 14 test cases · CircleCI |
+| **[dentsignal-twilio-evidence](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence)** | Sanitized historical Twilio voice, webhook, number-provisioning, callback, SMS, and migration evidence from DentSignal. | [evidence pack](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence) | Source/history pack with private commit provenance |
 
 ---
+
+## Stack I use
+
+**Python / FastAPI · JavaScript / TypeScript / Node.js · React / Next.js · PostgreSQL / SQLite · Redis / Celery · Playwright / Puppeteer · CircleCI / GitHub Actions**
+
+I care about verification as much as implementation: tests, explicit failure states, idempotency, bounded side effects, privacy boundaries, observability, and documentation that separates what is proven from what is still unknown.
 
 ## Case studies
 
-**[niyampaneru.me](https://niyampaneru.me)** — ten write-ups covering system
-builds and focused repairs. Each pairs the architecture with the specific bug, the
-code change, and the honest limit of what the evidence supports.
-
-`Deployed systems stay private. The reasoning does not have to.`
-
----
+**[niyampaneru.me](https://niyampaneru.me)** — architecture walkthroughs and case studies from larger private project work, including the problem, system shape, specific repair or implementation, evidence, and limitations.
 
 ## Contact
 
+- Website — [niyampaneru.me](https://niyampaneru.me)
 - Email — [niyampaneru79@gmail.com](mailto:niyampaneru79@gmail.com)
-- GitHub — [@Niyam-Paneru](https://github.com/Niyam-Paneru)
