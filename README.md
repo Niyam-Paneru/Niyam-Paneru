@@ -45,6 +45,16 @@ Yes, this is a real repository. No, the panda does not have a blockchain.
 
 I would rather kill a weak idea early than spend a month making its dashboard prettier.
 
+## Things I refuse to pretend
+
+- a modelled number is measured because the chart looks expensive;
+- a timeout proves an external side effect failed;
+- assisted practice is independent mastery;
+- an old implementation diagram describes today's runtime;
+- a lead score is secretly a probability of getting paid.
+
+Most of the repositories above exist because one of those shortcuts eventually becomes a real bug.
+
 ## Bigger projects behind the public slices
 
 - **Niyam AI** — long-running personal-AI work: typed memory, provenance, temporal retrieval, evals, model adapters, and current Kaggle experiments.
