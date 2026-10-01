@@ -8,6 +8,8 @@ I build software, then immediately ask it uncomfortable questions.
 
 I care about systems that can explain **why** they acted, **why not**, and what happens when the network, model, browser, caller, calendar, or human does something annoying.
 
+![Selected public work](assets/project-map.svg)
+
 ## If you only click four things
 
 | | Project | What is interesting about it |
