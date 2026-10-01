@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="310" viewBox="0 0 1200 310" role="img" aria-labelledby="t d">
+<title id="t">How Niyam works</title>
+<desc id="d">A loop from problem to smallest proof, break it, evidence decision, narrow or ship, then measure.</desc>
+<rect width="1200" height="310" fill="#0b1020"/>
+<text x="56" y="52" fill="#f8fafc" font-family="Arial,sans-serif" font-size="28" font-weight="700">Build the smallest thing that can prove me wrong.</text>
+<path d="M105 170 H1095" stroke="#273449" stroke-width="5" stroke-linecap="round"/>
+<g font-family="Arial,sans-serif" text-anchor="middle">
+  <g transform="translate(115)"><circle cy="170" r="27" fill="#60a5fa"/><text y="177" font-size="18" font-weight="700">1</text><text y="220" fill="#dbeafe" font-size="14">problem</text></g>
+  <g transform="translate(310)"><circle cy="170" r="27" fill="#38bdf8"/><text y="177" font-size="18" font-weight="700">2</text><text y="220" fill="#dbeafe" font-size="14">small proof</text></g>
+  <g transform="translate(505)"><circle cy="170" r="27" fill="#fb7185"/><text y="177" font-size="18" font-weight="700">3</text><text y="220" fill="#ffe4e6" font-size="14">try to break it</text></g>
+  <g transform="translate(700)"><circle cy="170" r="27" fill="#f59e0b"/><text y="177" font-size="18" font-weight="700">4</text><text y="220" fill="#fef3c7" font-size="14">evidence?</text></g>
+  <g transform="translate(895)"><circle cy="170" r="27" fill="#a78bfa"/><text y="177" font-size="18" font-weight="700">5</text><text y="220" fill="#ede9fe" font-size="14">narrow / ship</text></g>
+  <g transform="translate(1080)"><circle cy="170" r="27" fill="#4ade80"/><text y="177" font-size="18" font-weight="700">6</text><text y="220" fill="#dcfce7" font-size="14">measure reality</text></g>
+</g>
+<path d="M700 142 C690 88 345 88 310 142" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="8 8"/>
+<text x="505" y="88" fill="#fbbf24" font-family="Arial,sans-serif" font-size="14" text-anchor="middle">weak evidence → loop, do not decorate</text>
+<text x="1140" y="278" fill="#64748b" font-family="Arial,sans-serif" font-size="13" text-anchor="end">Dashboard polish is not a substitute for a working idea.</text>
+</svg>
