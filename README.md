@@ -30,7 +30,8 @@ Typical tools: **Python, FastAPI, JavaScript/TypeScript, Node.js, PostgreSQL, Re
 
 ## Portfolio & contact
 
-**Case studies:** [niyampaneru.me](https://niyampaneru.me)  
+**Case studies:** [niyampaneru.me](https://niyampaneru.me)
+
 **Email:** [niyampaneru79@gmail.com](mailto:niyampaneru79@gmail.com)
 
 For a fast technical review, start with one of the five repositories above.
