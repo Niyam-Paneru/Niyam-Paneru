@@ -9,7 +9,7 @@ The common thread is explicit state, bounded permissions, and failure handling t
 
 | Project | What it shows |
 | --- | --- |
-| **[agent-policy-core](https://github.com/Niyam-Paneru/agent-policy-core)** | Deny-by-default tool policy with reviewed permission boundaries, stale-evidence narrowing, idempotency, and redacted audit evidence. |
+| **[metric-integrity](https://github.com/Niyam-Paneru/metric-integrity)** | Metric lineage that keeps denominator choice, evidence basis, quote safety, and unsupported attribution explicit. |
 | **[attended-browser-bridge](https://github.com/Niyam-Paneru/attended-browser-bridge)** | Public control core for attended browser automation: fresh snapshots, bounded writes, and explicit handling for ambiguous effects. |
 | **[ai-booking-workflow](https://github.com/Niyam-Paneru/ai-booking-workflow)** | Deterministic booking flow that only confirms a slot previously supplied to and offered by the workflow, with human handoff on uncertainty. |
 | **[voice-pipeline-guard](https://github.com/Niyam-Paneru/voice-pipeline-guard)** | Bounded audio validation and latency gates for realtime voice paths, including suppression when timing evidence is incomplete or over budget. |
