@@ -3,7 +3,10 @@
 **Backend systems · AI automation · realtime voice · browser workflows**
 
 I build software that connects AI to real actions: browser writes, booking flows, voice pipelines, APIs, and remote compute.
-The common thread is explicit state, bounded permissions, and failure handling that does not quietly turn uncertainty into success.
+
+**The happy path gets a demo. The unhappy path gets most of my week.**
+
+The repos below are **public samples of larger systems I work on in private**. Each exposes a useful piece of the implementation so you can review the code and tests. I also build the surrounding applications, workflows, and integrations, and can adapt them to a project's requirements.
 
 ## Selected work
 
@@ -20,7 +23,7 @@ The common thread is explicit state, bounded permissions, and failure handling t
 - Backend and workflow systems where state transitions are explicit and testable.
 - AI-agent boundaries for permissions, retries, handoffs, and external side effects.
 - Voice and realtime paths where malformed input, latency, and incomplete work are explicit states.
-- Narrow public slices of larger systems when private operational details should stay private.
+- Complete applications and integrations, with selected public samples for technical review.
 
 ## How I work
 
