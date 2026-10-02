@@ -1,79 +1,36 @@
 # Niyam Paneru
 
-I build software, then immediately ask it uncomfortable questions.
+**Backend systems · AI automation · realtime voice · browser workflows**
 
-`backend` · `AI agents` · `voice` · `automation` · `evaluation` · `weird side projects that somehow become serious`
+I build software that connects AI to real actions: browser writes, booking flows, voice pipelines, APIs, and remote compute.
+The common thread is explicit state, bounded permissions, and failure handling that does not quietly turn uncertainty into success.
 
-> “What happens if this runs twice?” is basically my love language.
+## Selected work
 
-I care about systems that can explain **why** they acted, **why not**, and what happens when the network, model, browser, caller, calendar, or human does something annoying.
+| Project | What it shows |
+| --- | --- |
+| **[metric-integrity](https://github.com/Niyam-Paneru/metric-integrity)** | Metric lineage that keeps denominator choice, evidence basis, quote safety, and unsupported attribution explicit. |
+| **[attended-browser-bridge](https://github.com/Niyam-Paneru/attended-browser-bridge)** | Public control core for attended browser automation: fresh snapshots, bounded writes, and explicit handling for ambiguous effects. |
+| **[ai-booking-workflow](https://github.com/Niyam-Paneru/ai-booking-workflow)** | Deterministic booking flow that only confirms a slot previously supplied to and offered by the workflow, with human handoff on uncertainty. |
+| **[voice-pipeline-guard](https://github.com/Niyam-Paneru/voice-pipeline-guard)** | Bounded audio validation and latency gates for realtime voice paths, including suppression when timing evidence is incomplete or over budget. |
+| **[ubuntu-phone-compute-bridge](https://github.com/Niyam-Paneru/ubuntu-phone-compute-bridge)** | Bounded Windows-to-phone compute protocol with named jobs, structured result validation, and artifact integrity checks. |
 
-![Selected public work](assets/project-map.svg)
+## What I build
 
-## If you only click four things
+- Backend and workflow systems where state transitions are explicit and testable.
+- AI-agent boundaries for permissions, retries, handoffs, and external side effects.
+- Voice and realtime paths where malformed input, latency, and incomplete work are explicit states.
+- Narrow public slices of larger systems when private operational details should stay private.
 
-| | Project | What is interesting about it |
-|---|---|---|
-| 📞 | **[ai-booking-workflow](https://github.com/Niyam-Paneru/ai-booking-workflow)** | A booking FSM that can offer and confirm a real slot without inventing one because the conversation got awkward. |
-| 🖱️ | **[attended-browser-bridge](https://github.com/Niyam-Paneru/attended-browser-bridge)** | Browser-write policy where “maybe it clicked” means **stop**, not “click harder.” |
-| 🧠 | **[temporal-memory-core](https://github.com/Niyam-Paneru/temporal-memory-core)** | Personal-memory retrieval with valid time, knowledge time, supersession, and use permissions. |
-| 📱 | **[ubuntu-phone-compute-bridge](https://github.com/Niyam-Paneru/ubuntu-phone-compute-bridge)** | Windows → SSH → Termux → Ubuntu jobs on an Android phone, with a tiny allowlist and result verification. |
+## How I work
 
-## Voice, agents, and things that are allowed to say “no”
+I start with the failure modes and state transitions before adding automation. External writes get explicit permissions and replay rules; tests cover the cases that would otherwise turn uncertainty into false success.
 
-- **[ai-sales-call-guard](https://github.com/Niyam-Paneru/ai-sales-call-guard)** — default-deny gates around AI sales-call experiments: DNC, disclosure, self-test allowlists, daily caps, and no-PHI boundaries.
-- **[agent-policy-core](https://github.com/Niyam-Paneru/agent-policy-core)** — expiring grants, idempotency, ambiguous-effect blocking, credential redaction.
-- **[voice-pipeline-guard](https://github.com/Niyam-Paneru/voice-pipeline-guard)** — bounded audio and latency/failure rules for realtime voice.
-- **[human-gated-research](https://github.com/Niyam-Paneru/human-gated-research)** — irreversible actions stay behind human approval tied to the exact content.
-- **[dentsignal-twilio-evidence](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence)** — sanitized historical telephony evidence from DentSignal.
+Typical tools: **Python, FastAPI, JavaScript/TypeScript, Node.js, PostgreSQL, Redis, Playwright, React/Next.js, CircleCI, Cloudflare, Azure.**
 
-## Memory, learning, and not lying to ourselves
+## Portfolio & contact
 
-- **[learning-evidence-core](https://github.com/Niyam-Paneru/learning-evidence-core)** — assisted practice is useful; it is not silently renamed “mastery.”
-- **[metric-integrity](https://github.com/Niyam-Paneru/metric-integrity)** — measured/modelled labels, denominator-safe reporting, unsupported-attribution refusal.
-- **[opportunity-intelligence-core](https://github.com/Niyam-Paneru/opportunity-intelligence-core)** — public opportunity evidence → hard gates → deterministic scoring → proof plan → human review.
+**Case studies:** [niyampaneru.me](https://niyampaneru.me)  
+**Email:** [niyampaneru79@gmail.com](mailto:niyampaneru79@gmail.com)
 
-## One weird one, because software should occasionally be fun
-
-**[relic-zero](https://github.com/Niyam-Paneru/relic-zero)** — one panda relic, one-use invitation links, immutable bless/corrupt history, and no automatic forwarding.
-
-Yes, this is a real repository. No, the panda does not have a blockchain.
-
-## How I usually work
-
-![Evidence-first workflow](assets/how-i-work.svg)
-
-I would rather kill a weak idea early than spend a month making its dashboard prettier.
-
-## Things I refuse to pretend
-
-- a modelled number is measured because the chart looks expensive;
-- a timeout proves an external side effect failed;
-- assisted practice is independent mastery;
-- an old implementation diagram describes today's runtime;
-- a lead score is secretly a probability of getting paid.
-
-Most of the repositories above exist because one of those shortcuts eventually becomes a real bug.
-
-## Bigger projects behind the public slices
-
-- **Niyam AI** — long-running personal-AI work: typed memory, provenance, temporal retrieval, evals, model adapters, and current Kaggle experiments.
-- **Niyam Learning OS** — evidence-backed learning, RS-1 decision practice, CS/AI labs, English, local-first state, and a live app: **[open it](https://niyam-learning-os.niyampaneru79.workers.dev)**.
-- **Browser Bridge** — attended Chrome control with fresh snapshots, bounded writes, recovery, and audit trails.
-- **DentSignal** — historical AI voice/receptionist system spanning telephony, Deepgram voice, booking, handoff, and guarded sales-call experiments.
-
-Private code stays private when publishing it would expose personal data, credentials, operational state, or a giant repo that makes review harder instead of easier. The public repos are the parts worth inspecting without needing a treasure map.
-
-## Tools I actually use
-
-**Python, FastAPI, JavaScript, TypeScript, Node.js, React, Next.js, PostgreSQL, SQLite, Redis, Celery, Playwright, Puppeteer, CircleCI, Azure, Cloudflare, Supabase.**
-
-Also C, whenever I want the computer to remind me that memory has consequences.
-
-## Case studies
-
-**[niyampaneru.me](https://niyampaneru.me)** — larger project walkthroughs, architecture, evidence, and limitations.
-
-## Contact
-
-**[niyampaneru.me](https://niyampaneru.me)** · **[niyampaneru79@gmail.com](mailto:niyampaneru79@gmail.com)**
+For a fast technical review, start with one of the five repositories above.
