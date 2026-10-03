@@ -43,7 +43,7 @@ I start with the failure modes and state transitions before adding automation. E
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" title="React" width="36" height="36" />
 </p>
 
-Typical tools: **Python, FastAPI, JavaScript/TypeScript, Node.js, PostgreSQL, Redis, Playwright, React/Next.js, CircleCI, Cloudflare, Azure.**
+Typical tools: **Python, FastAPI, JavaScript/TypeScript, Node.js, PostgreSQL, Redis, Playwright, React/Next.js, Celery, Cloudflare, Azure.**
 
 **Also C, whenever I want the computer to remind me that memory has consequences.**
 
