@@ -31,6 +31,8 @@ I start with the failure modes and state transitions before adding automation. E
 
 Typical tools: **Python, FastAPI, JavaScript/TypeScript, Node.js, PostgreSQL, Redis, Playwright, React/Next.js, CircleCI, Cloudflare, Azure.**
 
+Also C, whenever I want the computer to remind me that memory has consequences.
+
 ## Portfolio & contact
 
 **Case studies:** [niyampaneru.me](https://niyampaneru.me)
