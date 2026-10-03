@@ -6,8 +6,6 @@ I build software that connects AI to real actions: browser writes, booking flows
 
 **The happy path gets a demo. The unhappy path gets most of my week.**
 
-**Also C, whenever I want the computer to remind me that memory has consequences.**
-
 The repos below are **public samples of larger systems I work on in private**. Each exposes a useful piece of the implementation so you can review the code and tests. I also build the surrounding applications, workflows, and integrations, and can adapt them to a project's requirements.
 
 ## Selected work
@@ -31,7 +29,23 @@ The repos below are **public samples of larger systems I work on in private**. E
 
 I start with the failure modes and state transitions before adding automation. External writes get explicit permissions and replay rules; tests cover the cases that would otherwise turn uncertainty into false success.
 
+<p>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" title="Python" width="36" height="36" />
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg" alt="FastAPI" title="FastAPI" width="36" height="36" />
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript" width="36" height="36" />
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" width="36" height="36" />
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL" width="36" height="36" />
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" title="React" width="36" height="36" />
+</p>
+
 Typical tools: **Python, FastAPI, JavaScript/TypeScript, Node.js, PostgreSQL, Redis, Playwright, React/Next.js, CircleCI, Cloudflare, Azure.**
+
+**Also C, whenever I want the computer to remind me that memory has consequences.**
 
 ## Portfolio & contact
 
