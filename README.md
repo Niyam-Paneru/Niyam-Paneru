@@ -6,6 +6,8 @@ I build software that connects AI to real actions: browser writes, booking flows
 
 **The happy path gets a demo. The unhappy path gets most of my week.**
 
+**Also C, whenever I want the computer to remind me that memory has consequences.**
+
 The repos below are **public samples of larger systems I work on in private**. Each exposes a useful piece of the implementation so you can review the code and tests. I also build the surrounding applications, workflows, and integrations, and can adapt them to a project's requirements.
 
 ## Selected work
@@ -30,8 +32,6 @@ The repos below are **public samples of larger systems I work on in private**. E
 I start with the failure modes and state transitions before adding automation. External writes get explicit permissions and replay rules; tests cover the cases that would otherwise turn uncertainty into false success.
 
 Typical tools: **Python, FastAPI, JavaScript/TypeScript, Node.js, PostgreSQL, Redis, Playwright, React/Next.js, CircleCI, Cloudflare, Azure.**
-
-Also C, whenever I want the computer to remind me that memory has consequences.
 
 ## Portfolio & contact
 
