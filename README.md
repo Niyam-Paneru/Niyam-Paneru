@@ -1,56 +1,32 @@
 # Niyam Paneru
 
-**Backend systems · AI automation · realtime voice · browser workflows**
+I build software that talks to browsers, APIs, audio pipelines, and occasionally humans. The humans are still the hardest integration.
 
-I build software that connects AI to real actions: browser writes, booking flows, voice pipelines, APIs, and remote compute.
+Mostly **Python, TypeScript/JavaScript, Rust, FastAPI, Playwright, and PostgreSQL**. I like working systems, clear failure states, and logs that don't gaslight the person debugging them.
 
-**The happy path gets a demo. The unhappy path gets most of my week.**
+## Things I've actually built
 
-The repos below are **public samples of larger systems I work on in private**. Each exposes a useful piece of the implementation so you can review the code and tests. I also build the surrounding applications, workflows, and integrations, and can adapt them to a project's requirements.
-
-## Selected work
-
-| Project | What it shows |
+| Project | What's there to inspect |
 | --- | --- |
-| **[metric-integrity](https://github.com/Niyam-Paneru/metric-integrity)** | Metric lineage that keeps denominator choice, evidence basis, quote safety, and unsupported attribution explicit. |
-| **[attended-browser-bridge](https://github.com/Niyam-Paneru/attended-browser-bridge)** | Public control core for attended browser automation: fresh snapshots, bounded writes, and explicit handling for ambiguous effects. |
-| **[ai-booking-workflow](https://github.com/Niyam-Paneru/ai-booking-workflow)** | Deterministic booking flow that only confirms a slot previously supplied to and offered by the workflow, with human handoff on uncertainty. |
-| **[voice-pipeline-guard](https://github.com/Niyam-Paneru/voice-pipeline-guard)** | Bounded audio validation and latency gates for realtime voice paths, including suppression when timing evidence is incomplete or over budget. |
-| **[ubuntu-phone-compute-bridge](https://github.com/Niyam-Paneru/ubuntu-phone-compute-bridge)** | Bounded Windows-to-phone compute protocol with named jobs, structured result validation, and artifact integrity checks. |
+| **[reastream](https://github.com/Niyam-Paneru/reastream)** · Rust CLI | Read a measured **1.26 GB UTF-16LE analysis file** and kept a **6.55 MB capability index** (19,962 records). Streaming parser, tests, and [benchmark notes](https://github.com/Niyam-Paneru/reastream/blob/main/docs/measurements/README.md). |
+| **[Best Tech Solutions website](https://github.com/Niyam-Paneru/bts-website-preview)** · HTML/CSS/JS | Multi-page computer-shop **client preview**: laptop galleries, services, contact, and WhatsApp enquiries. Source is public; launch approval is still pending. |
+| **[Attended Browser Bridge](https://github.com/Niyam-Paneru/attended-browser-bridge)** · JavaScript | A runnable **write-control core** for browser automation: permissions, fresh page snapshots, one-write intent ledger, and blocked blind retries. No browser driver in this public repo. |
+| **[Booking Workflow](https://github.com/Niyam-Paneru/ai-booking-workflow)** · Python | A tested **booking state machine** that rejects time slots it never offered instead of confidently confirming fictional appointments. No live calendar integration. |
+| **[Metric Integrity](https://github.com/Niyam-Paneru/metric-integrity)** · Python | A small analytics demo where **4 bookings / 14 booking-intent calls = 28.6%**, but **4 / 34 total calls = 11.8%**. Same records, different claims; both calculations carry their evidence basis. |
+| **[Voice Pipeline Guard](https://github.com/Niyam-Paneru/voice-pipeline-guard)** · Python | Testable WAV size/format bounds and realtime timing decisions: missing or late processing evidence suppresses output. Synthetic audio, not a live calling service. |
 
-## What I build
+## The larger projects behind some of these experiments
 
-- Backend and workflow systems where state transitions are explicit and testable.
-- AI-agent boundaries for permissions, retries, handoffs, and external side effects.
-- Voice and realtime paths where malformed input, latency, and incomplete work are explicit states.
-- Complete applications and integrations, with selected public samples for technical review.
+- **DentSignal** — an independent voice-receptionist/backend project. The public [Twilio history pack](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence) shows sanitized earlier call/callback and number-management code; it is **not** the current full app. My [published repair case studies](https://niyampaneru.me/) use synthetic checks and spell out their limitations.
+- **Browser Bridge and Niyam-AI** — private browser-control and personal-AI work. Their public building blocks include [agent policy](https://github.com/Niyam-Paneru/agent-policy-core), [temporal memory](https://github.com/Niyam-Paneru/temporal-memory-core), and [human-gated research](https://github.com/Niyam-Paneru/human-gated-research). Those repositories demonstrate specific components, **not** entire deployed products.
+- **Learning OS** — experiments in measuring whether practice was independent or assisted. The [public evidence core](https://github.com/Niyam-Paneru/learning-evidence-core) contains the inspectable rules.
 
-## How I work
+## Small engineering obsessions
 
-I start with the failure modes and state transitions before adding automation. External writes get explicit permissions and replay rules; tests cover the cases that would otherwise turn uncertainty into false success.
+A timeout is **not** proof a write failed. A passing unit test is **not** proof a service is in production. And a dashboard percentage without its denominator is a decorative number.
 
-<p>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" title="Python" width="36" height="36" />
-  &nbsp;
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg" alt="FastAPI" title="FastAPI" width="36" height="36" />
-  &nbsp;
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript" width="36" height="36" />
-  &nbsp;
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" width="36" height="36" />
-  &nbsp;
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL" width="36" height="36" />
-  &nbsp;
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" title="React" width="36" height="36" />
-</p>
+That's why the public repositories include runnable behavior tests, synthetic examples, and explicit boundaries. Some are standalone tools; others are deliberately small modules from private projects. Each README says which is which.
 
-Typical tools: **Python, FastAPI, JavaScript/TypeScript, Node.js, PostgreSQL, Redis, Playwright, React/Next.js, Celery, Cloudflare, Azure.**
+If you're curious about the stranger corners: there's a [phone-compute protocol](https://github.com/Niyam-Paneru/ubuntu-phone-compute-bridge), an [opportunity triage engine](https://github.com/Niyam-Paneru/opportunity-intelligence-core), and [a panda-powered capability relay](https://github.com/Niyam-Paneru/relic-zero). The panda is not in charge of security.
 
-**Also C, whenever I want the computer to remind me that memory has consequences.**
-
-## Portfolio & contact
-
-**Case studies:** [niyampaneru.me](https://niyampaneru.me)
-
-**Email:** [niyampaneru79@gmail.com](mailto:niyampaneru79@gmail.com)
-
-For a fast technical review, start with one of the five repositories above.
+**More:** [Case studies and interactive synthetic checks](https://niyampaneru.me/) · [Email](mailto:niyampaneru79@gmail.com)
