@@ -1,10 +1,12 @@
 # Niyam Paneru
 
-Hi, I'm Niyam. I build backends, browser automation, voice systems, and side projects that have a habit of getting bigger than planned.
+Hi, I'm Niyam. I build backends, browser automation, voice systems, and side projects that usually start with *“this should be simple.”*
 
-Most of them start with “this should be simple.” A few hours later, I'm arguing with a timeout, a denominator, or a button that may or may not have been clicked. Apparently my idea of a hobby is making computers provide evidence.
+Then a button times out, an AI confidently reports a booking that never happened, or a dashboard gets a more flattering denominator. So I end up building the less glamorous part: checks that ask **did the thing actually happen?**
 
-## A few things you can poke around in
+Computers already know how to sound confident. I'm trying to get mine to show receipts.
+
+## Five rabbit holes worth exploring
 
 **[reastream](https://github.com/Niyam-Paneru/reastream)** — I asked a reverse-engineering tool for a little evidence. It handed me a **1.26 GB** file. Fascinating interpretation of “little.” I wrote a Rust reader to extract what I needed; [one measured run](https://github.com/Niyam-Paneru/reastream/blob/main/docs/measurements/README.md) kept **6.55 MB** of records.
 
