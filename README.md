@@ -2,29 +2,27 @@
 
 Hi, I'm Niyam. I build backends, browser automation, voice systems, and side projects that have a habit of getting bigger than planned.
 
-They usually begin with “this should be simple.” Then a page freezes after Submit, a chatbot invents an appointment, or a tool hands me 1.26 GB of analysis when I asked for a few records.
-
-Somehow I've become the person who asks computers for receipts.
-
 ## Start somewhere
 
-**[reastream](https://github.com/Niyam-Paneru/reastream)** — I asked a reverse-engineering tool for a little evidence. It handed me **1.26 GB**. That's technically an answer, in the same way dropping a library on someone is a book recommendation. I wrote a Rust streaming reader; [one measured run](https://github.com/Niyam-Paneru/reastream/blob/main/docs/measurements/README.md) kept **6.55 MB** of useful records.
+**[reastream](https://github.com/Niyam-Paneru/reastream)** — I asked a reverse-engineering tool for a small piece of evidence. It gave me **1.26 GB**. Apparently we disagree on the meaning of *small*. I wrote a Rust streaming reader to extract what mattered: **6.55 MB** of records in [one measured run](https://github.com/Niyam-Paneru/reastream/blob/main/docs/measurements/README.md). My laptop appreciated the compromise.
 
-**[Attended Browser Bridge](https://github.com/Niyam-Paneru/attended-browser-bridge)** — An agent clicks Submit. The page freezes. The agent's first instinct is to click again; mine is to prevent an accidental sequel. This JavaScript core tracks permissions and uncertain writes so a timeout doesn't become two submissions. It's the control logic, not the Chrome driver.
+**[Attended Browser Bridge](https://github.com/Niyam-Paneru/attended-browser-bridge)** — An agent clicks Submit. The page freezes. The agent wants to click again. That's how one mysterious timeout becomes two very real submissions. This JavaScript core tracks permission and uncertain writes so “try again” isn't the default. It's the control logic, not the Chrome driver.
 
-**[Metric Integrity](https://github.com/Niyam-Paneru/metric-integrity)** — I discovered an amazing growth hack: turn **11.8%** into **28.6%** by changing the denominator. Zero additional bookings, one extremely pleased dashboard. This Python module makes percentages carry their population and evidence instead of hiring the chart as a publicist. The example uses synthetic calls.
+**[Metric Integrity](https://github.com/Niyam-Paneru/metric-integrity)** — I turned a booking rate of **11.8%** into **28.6%** without getting a single extra booking. Please don't hire me as a growth hacker. The trick is a different denominator; this Python module makes reports say which population they're measuring. The example uses synthetic calls, not client results.
 
-**[AI Booking Workflow](https://github.com/Niyam-Paneru/ai-booking-workflow)** — The receptionist offers 10 AM and 11 AM. The caller wants 2 PM. A chatbot cheerfully says “Booked!” and leaves reality to sort out the details. My Python state machine refuses to confirm a time it never offered. It does **not** connect to a live calendar.
+**[AI Booking Workflow](https://github.com/Niyam-Paneru/ai-booking-workflow)** — A caller asks for 2 PM. The receptionist only offered 10 AM and 11 AM. An enthusiastic chatbot says “Booked!” The calendar, which has never met this appointment, has questions. This Python state machine only creates a booking value for an offered and confirmed time. There's no live calendar integration here.
 
-**[Relic Zero](https://github.com/Niyam-Paneru/relic-zero)** — A one-use secret-invitation chain involving a mysterious panda. The panda handles public relations. JavaScript handles token validation, which is good because the panda has not passed a security audit either.
+**[Relic Zero](https://github.com/Niyam-Paneru/relic-zero)** — A secret invitation passes from person to person, each leaving a mark on a mysterious panda. The panda is head of security in name only. JavaScript handles the one-use tokens and state checks; it's a rules prototype, not an audited public game.
 
-## The projects that won't leave my desk
+## The projects I keep coming back to
 
-**Niyam-AI** is my private personal-AI project. The goal is an assistant that remembers what happened, not a director's-cut version of what happened. **DentSignal** is private voice-receptionist/backend work; the public [Twilio chapter](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence) is sanitized historical code, not the full current receptionist.
+**Niyam-AI** is my private personal-AI project. Some assistants have an impressive memory for things that never happened. I'm working on making mine remember the useful real stuff, learn from corrections, and admit when it doesn't know.
 
-I also built [memory with two clocks](https://github.com/Niyam-Paneru/temporal-memory-core) so an assistant doesn't learn something on February 10 and claim it knew on February 5; a [voice timing guard](https://github.com/Niyam-Paneru/voice-pipeline-guard) for brilliant answers that arrive after the caller has gone; and a [phone-compute controller](https://github.com/Niyam-Paneru/ubuntu-phone-compute-bridge) that refuses to give my phone credit for work my laptop secretly did.
+**DentSignal** is private voice-receptionist and backend work. I published [the old Twilio chapter](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence) as sanitized historical code you can inspect, not as a claim that the whole current receptionist is public.
 
-Some repositories are standalone tools. Others are small public pieces of larger private projects. I try to show the part you can actually inspect rather than advertise a spaceship held together by a README.
+There are smaller experiments too: [temporal memory](https://github.com/Niyam-Paneru/temporal-memory-core), where February 10 knowledge isn't allowed to sneak into February 5; a [voice timing guard](https://github.com/Niyam-Paneru/voice-pipeline-guard) for good answers that arrive after the caller has left; and a [phone-compute controller](https://github.com/Niyam-Paneru/ubuntu-phone-compute-bridge) that refuses to give my phone credit for work it didn't do.
+
+Some repos are complete small tools; others are public pieces of bigger private projects. I try to make that distinction clear. The README can be ambitious; the code still has to show up.
 
 ## Tools I keep reaching for
 
