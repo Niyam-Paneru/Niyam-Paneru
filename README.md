@@ -1,34 +1,35 @@
 # Niyam Paneru
 
-Hi, I'm Niyam. I build backends, browser automation, voice systems, and experiments that usually start with *“this should be simple.”*
+Hi, I'm Niyam. I build backends, browser automation, voice systems, and little experiments that have a habit of becoming **very large little experiments**.
 
-A lot of my code comes back to one annoying question: **did the thing actually happen?** A request timing out doesn't mean it failed. An agent saying “done” doesn't mean it did anything. And a passing test doesn't mean production is having a good day.
+The usual sequence is: “This should take an afternoon.” Then I discover a failure case. Then another. Six tests later, the original idea is hiding somewhere under a recovery protocol.
 
-I'm not particularly interested in teaching a computer to sound confident. It's already excellent at that.
+I like software that can answer **“did it actually happen?”** A timeout isn't a failed action, a green test isn't a deployment, and an AI saying “done” isn't a receipt. If the system doesn't know, I'd rather it say so than perform confidence for the audience.
 
-## Start somewhere
+## Choose a rabbit hole
 
-**[reastream](https://github.com/Niyam-Paneru/reastream)** — I needed a small part of a 1.26 GB analysis result, so I wrote a Rust streaming reader rather than inviting the entire file into memory. The [measured run](https://github.com/Niyam-Paneru/reastream/blob/main/docs/measurements/README.md) kept 6.55 MB of records. My laptop was relieved.
+| Project | The problem (and the questionable decision it led to) |
+| --- | --- |
+| **[reastream](https://github.com/Niyam-Paneru/reastream)** · Rust | A reverse-engineering tool handed me a **1.26 GB** result. I wanted a small part of it, not a second mortgage on my laptop's RAM. A [measured run](https://github.com/Niyam-Paneru/reastream/blob/main/docs/measurements/README.md) extracted **6.55 MB** of records. |
+| **[Attended Browser Bridge](https://github.com/Niyam-Paneru/attended-browser-bridge)** · JavaScript | A browser clicks Submit, then freezes. Click again? Maybe you've just submitted twice. This is the write-control core that refuses to gamble on that “maybe.” No Chrome driver in this public repo. |
+| **[Metric Integrity](https://github.com/Niyam-Paneru/metric-integrity)** · Python | Four bookings can produce **28.6%** or **11.8%**, depending on what you count. Both calculations are correct. Only one answers the question. The denominator is apparently a character in this story. |
+| **[AI Booking Workflow](https://github.com/Niyam-Paneru/ai-booking-workflow)** · Python | A receptionist that won't book 2 PM when it only offered 10 and 11. Revolutionary technology: not making things up. It's a state machine, **not** a connected calendar. |
+| **[Temporal Memory Core](https://github.com/Niyam-Paneru/temporal-memory-core)** · Python | A fact can be true on Monday and only learned on Friday. Mixing those up gives your assistant accidental time-travel powers. This module keeps the two clocks separate. |
+| **[Relic Zero](https://github.com/Niyam-Paneru/relic-zero)** · JavaScript | A one-use invitation relay starring a mysterious panda. The panda gets lore. The secrets get actual rules. |
 
-**[Attended Browser Bridge](https://github.com/Niyam-Paneru/attended-browser-bridge)** — a JavaScript core for the moment when a browser agent clicks Submit, the page freezes, and nobody knows whether clicking again will create a duplicate. It makes that uncertainty explicit. The public repository is the control logic, not the Chrome driver.
+## Bigger projects, smaller public windows
 
-**[AI Booking Workflow](https://github.com/Niyam-Paneru/ai-booking-workflow)** — a Python state machine that won't confirm a time it never offered. It doesn't connect to a live calendar. It does know that guessing isn't availability.
+**Niyam-AI** is my ongoing personal-AI project: memory, evidence, and learning when to say “I don't know.” **DentSignal** is voice-receptionist/backend work. Its public [Twilio history](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence) is an older, sanitized implementation, not the whole current application.
 
-**[Relic Zero](https://github.com/Niyam-Paneru/relic-zero)** — a one-use invite chain wrapped around a mysterious panda. Yes, there's a panda. No, the panda doesn't get to manage the secrets.
+Other detours include a [voice timing guard](https://github.com/Niyam-Paneru/voice-pipeline-guard) (a late answer is not suddenly punctual because the transcript is good), a [phone-compute controller](https://github.com/Niyam-Paneru/ubuntu-phone-compute-bridge) (the laptop isn't allowed to take credit for the phone's work), and a [research approval gate](https://github.com/Niyam-Paneru/human-gated-research) (approval for one proposal isn't approval for its evil twin).
 
-The other repositories are [over here](https://github.com/Niyam-Paneru?tab=repositories). Some are standalone tools; others are small, testable pieces of larger private projects. I try to be clear about the difference.
+Some public repos are standalone tools; others are focused pieces of bigger private systems. I try to label that instead of advertising an entire spaceship when the repo contains a very carefully tested door.
 
-## The projects that keep pulling me back
-
-**Niyam-AI** is my ongoing personal-AI experiment, especially around memory, evidence, and what a model should say when it *doesn't* know. **DentSignal** is voice-receptionist/backend work; I kept [a historical Twilio implementation](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence) public so the code can speak for itself. Neither private application is fully published here.
-
-I keep making things that fail in interesting ways. Then I spend considerably longer trying to make them fail *honestly*.
-
-## Stuff on my desk (figuratively)
+## Tools I keep reaching for
 
 Python, FastAPI, JavaScript/TypeScript, Node.js, Playwright, PostgreSQL, React, Rust.
 
-**Also C, whenever I want the computer to remind me that memory has consequences.**
+And C, whenever I feel like being personally reminded that memory has consequences.
 
 <p>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" title="Python" width="36" height="36" />
@@ -48,4 +49,4 @@ Python, FastAPI, JavaScript/TypeScript, Node.js, Playwright, PostgreSQL, React, 
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C" title="C" width="36" height="36" />
 </p>
 
-[Case studies](https://niyampaneru.me/) · [Email](mailto:niyampaneru79@gmail.com)
+[Case studies](https://niyampaneru.me/) · [All repositories](https://github.com/Niyam-Paneru?tab=repositories) · [Email](mailto:niyampaneru79@gmail.com)
