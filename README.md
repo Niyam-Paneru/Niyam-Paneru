@@ -6,25 +6,25 @@ It usually starts with “this should be simple.” Then a form might have submi
 
 I keep coming back to one question: **did it actually happen?** A timeout doesn't prove failure, and an AI saying “done” isn't evidence.
 
-## A few places to start
+## A few things you can poke around in
 
-**[reastream](https://github.com/Niyam-Paneru/reastream)** — A reverse-engineering tool handed me a **1.26 GB** analysis file. I only needed part of it, so I wrote a Rust streaming reader. In [one measured run](https://github.com/Niyam-Paneru/reastream/blob/main/docs/measurements/README.md), it kept **6.55 MB** of records. My laptop appreciated the restraint.
+**[reastream](https://github.com/Niyam-Paneru/reastream)** — A tool gave me a **1.26 GB** analysis file. I wanted a few fields. Somehow writing a Rust streaming reader became the *smaller* job. On [one recorded run](https://github.com/Niyam-Paneru/reastream/blob/main/docs/measurements/README.md), it kept **6.55 MB** of records without loading the whole thing into memory.
 
-**[Attended Browser Bridge](https://github.com/Niyam-Paneru/attended-browser-bridge)** — A browser clicks Submit, then freezes. Clicking again might submit the same thing twice. This JavaScript core tracks permissions and uncertain writes rather than guessing. The browser driver isn't in this public repo.
+**[Attended Browser Bridge](https://github.com/Niyam-Paneru/attended-browser-bridge)** — A browser agent clicks Submit. The page freezes. Did it submit? Nobody knows. The obvious next move is to click again and accidentally apply for the same job twice. I built the JavaScript write-control core for that awkward moment. The Chrome driver isn't in this public repo.
 
-**[Metric Integrity](https://github.com/Niyam-Paneru/metric-integrity)** — Four bookings out of 14 interested callers is **28.6%**. Four out of all 34 calls is **11.8%**. Same bookings, different story. No extra appointments needed to change the headline.
+**[Metric Integrity](https://github.com/Niyam-Paneru/metric-integrity)** — Want a better-looking booking rate without getting any more bookings? Change the denominator. Four bookings can be **28.6%** or **11.8%**, depending on the question. Both calculations are valid; the headlines are not interchangeable.
 
-**[AI Booking Workflow](https://github.com/Niyam-Paneru/ai-booking-workflow)** — A Python state machine that won't confirm a time it never offered. It isn't connected to a real calendar; it just refuses to invent appointments.
+**[AI Booking Workflow](https://github.com/Niyam-Paneru/ai-booking-workflow)** — A caller wants 2 PM. The receptionist offered 10 and 11. The polite thing is to help; the *wrong* thing is to invent a 2 PM appointment. This Python state machine knows the difference. It isn't connected to a live calendar.
 
-**[Relic Zero](https://github.com/Niyam-Paneru/relic-zero)** — A one-use invitation chain built around a mysterious panda. Yes, there's a panda. No, the panda isn't in charge of the secrets.
+**[Relic Zero](https://github.com/Niyam-Paneru/relic-zero)** — A one-use invitation chain for a mysterious panda. I could explain why the panda is involved, but that would make this sound more deliberate than it was. The token rules are real; the panda doesn't handle the secrets.
 
-## The projects behind the smaller experiments
+## What keeps pulling me back
 
-**Niyam-AI** is my ongoing private personal-AI project, especially memory, evidence, and knowing when not to guess. **DentSignal** is voice-receptionist and backend work; the public [historical Twilio code](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence) shows an older implementation, not the current full app.
+**Niyam-AI** is my ongoing private personal-AI project, mainly about memory, evidence, and what happens when an assistant is very sure of something it shouldn't be. **DentSignal** is voice-receptionist and backend work; I published [an older, sanitized Twilio implementation](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence), not the whole current application.
 
-Other public pieces include [temporal memory](https://github.com/Niyam-Paneru/temporal-memory-core), [voice timing](https://github.com/Niyam-Paneru/voice-pipeline-guard), and a [phone-compute protocol](https://github.com/Niyam-Paneru/ubuntu-phone-compute-bridge).
+There are more experiments around [memory with two clocks](https://github.com/Niyam-Paneru/temporal-memory-core), [voice responses that arrive too late](https://github.com/Niyam-Paneru/voice-pipeline-guard), and [getting a phone to do the laptop's homework](https://github.com/Niyam-Paneru/ubuntu-phone-compute-bridge).
 
-Some repositories are standalone tools. Others are small, runnable pieces of larger private projects. I'd rather make that clear than claim the whole application is sitting in a single README.
+Some repositories are standalone tools. Others are small, runnable pieces of bigger private projects. The README should make it clear which is which; a nice screenshot is not an architecture diagram.
 
 ## Tools I keep reaching for
 
