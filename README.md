@@ -2,29 +2,27 @@
 
 Hi, I'm Niyam. I build backends, browser automation, voice systems, and side projects that have a habit of getting bigger than planned.
 
-It usually starts with “this should be simple.” Then a form might have submitted before the browser froze, or a perfectly correct percentage turns out to use the wrong denominator. Suddenly the small experiment has a test suite and a rather long README.
-
-I keep coming back to one question: **did it actually happen?** A timeout doesn't prove failure, and an AI saying “done” isn't evidence.
+Most of them start with “this should be simple.” A few hours later, I'm arguing with a timeout, a denominator, or a button that may or may not have been clicked. Apparently my idea of a hobby is making computers provide evidence.
 
 ## A few things you can poke around in
 
-**[reastream](https://github.com/Niyam-Paneru/reastream)** — A tool gave me a **1.26 GB** analysis file. I wanted a few fields. Somehow writing a Rust streaming reader became the *smaller* job. On [one recorded run](https://github.com/Niyam-Paneru/reastream/blob/main/docs/measurements/README.md), it kept **6.55 MB** of records without loading the whole thing into memory.
+**[reastream](https://github.com/Niyam-Paneru/reastream)** — I asked a reverse-engineering tool for a little evidence. It handed me a **1.26 GB** file. Fascinating interpretation of “little.” I wrote a Rust reader to extract what I needed; [one measured run](https://github.com/Niyam-Paneru/reastream/blob/main/docs/measurements/README.md) kept **6.55 MB** of records.
 
-**[Attended Browser Bridge](https://github.com/Niyam-Paneru/attended-browser-bridge)** — A browser agent clicks Submit. The page freezes. Did it submit? Nobody knows. The obvious next move is to click again and accidentally apply for the same job twice. I built the JavaScript write-control core for that awkward moment. The Chrome driver isn't in this public repo.
+**[Attended Browser Bridge](https://github.com/Niyam-Paneru/attended-browser-bridge)** — An agent clicks Submit. The page freezes. Naturally, its next idea is to click again. This JavaScript core is the friend who grabs its hand and says **absolutely not, we don't know what happened yet**. It's the write-control logic, not the Chrome driver.
 
-**[Metric Integrity](https://github.com/Niyam-Paneru/metric-integrity)** — Want a better-looking booking rate without getting any more bookings? Change the denominator. Four bookings can be **28.6%** or **11.8%**, depending on the question. Both calculations are valid; the headlines are not interchangeable.
+**[Metric Integrity](https://github.com/Niyam-Paneru/metric-integrity)** — I can turn a booking rate of **11.8%** into **28.6%** without a single extra booking. Nothing illegal; just pick a different denominator. I built this because spreadsheets shouldn't get to choose their own flattering camera angle.
 
-**[AI Booking Workflow](https://github.com/Niyam-Paneru/ai-booking-workflow)** — A caller wants 2 PM. The receptionist offered 10 and 11. The polite thing is to help; the *wrong* thing is to invent a 2 PM appointment. This Python state machine knows the difference. It isn't connected to a live calendar.
+**[AI Booking Workflow](https://github.com/Niyam-Paneru/ai-booking-workflow)** — An AI receptionist offers 10 AM and 11 AM. The caller asks for 2 PM. A very helpful liar says “Booked!” My Python state machine is less charming and considerably more useful. No live calendar integration here.
 
-**[Relic Zero](https://github.com/Niyam-Paneru/relic-zero)** — A one-use invitation chain for a mysterious panda. I could explain why the panda is involved, but that would make this sound more deliberate than it was. The token rules are real; the panda doesn't handle the secrets.
+**[Relic Zero](https://github.com/Niyam-Paneru/relic-zero)** — A one-use secret-invitation chain starring a mysterious panda. The panda has no qualifications, but excellent job security. The code, thankfully, handles the tokens.
 
-## What keeps pulling me back
+## Projects I keep coming back to
 
-**Niyam-AI** is my ongoing private personal-AI project, mainly about memory, evidence, and what happens when an assistant is very sure of something it shouldn't be. **DentSignal** is voice-receptionist and backend work; I published [an older, sanitized Twilio implementation](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence), not the whole current application.
+**Niyam-AI** is my private personal-AI project. I'm trying to teach an assistant to remember useful things without confidently remembering things that never happened. **DentSignal** is voice-receptionist/backend work; the public [Twilio evidence](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence) is older sanitized code, not the full current app.
 
-There are more experiments around [memory with two clocks](https://github.com/Niyam-Paneru/temporal-memory-core), [voice responses that arrive too late](https://github.com/Niyam-Paneru/voice-pipeline-guard), and [getting a phone to do the laptop's homework](https://github.com/Niyam-Paneru/ubuntu-phone-compute-bridge).
+There's also [memory with two clocks](https://github.com/Niyam-Paneru/temporal-memory-core), a [voice timing guard](https://github.com/Niyam-Paneru/voice-pipeline-guard) for answers that arrive after the conversation has moved on, and a [phone-compute controller](https://github.com/Niyam-Paneru/ubuntu-phone-compute-bridge) because my laptop and heavy workloads are not close friends.
 
-Some repositories are standalone tools. Others are small, runnable pieces of bigger private projects. The README should make it clear which is which; a nice screenshot is not an architecture diagram.
+Some of these repos are standalone tools; others are small pieces of bigger private projects. I'd rather show you the piece that works than write a README for an imaginary spaceship.
 
 ## Tools I keep reaching for
 
