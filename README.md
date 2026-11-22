@@ -32,7 +32,7 @@ A Python state machine that only creates a booking value for an offered and conf
 
 **Niyam-AI** is my private personal-AI project. I want it to remember the things that matter, learn from corrections and get better over time. The irony of building an assistant to help with my work and then spending so much of my time working on the assistant has not escaped me.
 
-**DentSignal** is my private voice-receptionist and backend project. I published [the old Twilio chapter](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence) so you can inspect the historical telephony code. It's a sanitized extract, not the current application or a deployable receptionist.
+**Niyam Guard** — I bought a smartphone. The smartphone acquired most of my attention. We're currently renegotiating the terms. I'm building a private Android Device Owner app to make distraction blocking harder to bypass, with recovery mechanisms so I don't accidentally lock myself out of my own phone. Still in development.
 
 ## Languages I argue with
 
@@ -45,5 +45,7 @@ C is particularly good at reminding me how much I took Python for granted.
 ---
 
 Some repositories are standalone projects; some are public pieces of larger private ones. I've tried to leave enough code and evidence in each to make it clear what's actually there.
+
+From an earlier project: [DentSignal's Twilio chapter](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence), sanitized historical telephony code, not a deployable receptionist.
 
 [Portfolio](https://niyampaneru.me/) · [More repositories](https://github.com/Niyam-Paneru?tab=repositories) · [Email](mailto:niyampaneru79@gmail.com)
