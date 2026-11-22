@@ -1,65 +1,49 @@
 # Niyam Paneru
 
-I build backends, browser automation and voice systems. I particularly enjoy the problems nobody puts in the demo: the button that doesn't respond, the API that says OK and the booking that somehow exists only in the chatbot's imagination.
+Hi, I'm Niyam. I build backends, browser automation, voice systems, and side projects that have a habit of getting bigger than planned.
 
-My favorite error message is the one that actually tells me what went wrong. Rare species.
+Usually it starts with "I wonder if I can do this."
 
-[Portfolio](https://niyampaneru.me/) · [Email me](mailto:niyampaneru79@gmail.com) · [The entire rabbit hole](https://github.com/Niyam-Paneru?tab=repositories)
+## It was supposed to be a small project.
 
-## The good stuff
+**[reastream](https://github.com/Niyam-Paneru/reastream)** — I needed a few records from a reverse-engineering result. It gave me **1.26 GB**. Rather than develop a healthier relationship with large files, I wrote a Rust streaming reader. [One measured run](https://github.com/Niyam-Paneru/reastream/blob/main/docs/measurements/README.md) kept **6.55 MB** of records. My laptop appreciated that.
 
-### [reastream](https://github.com/Niyam-Paneru/reastream) — Rust vs. an absolutely unreasonable JSON file
+**[Attended Browser Bridge](https://github.com/Niyam-Paneru/attended-browser-bridge)** — There's a wonderful moment after clicking Submit when the page does absolutely nothing and you're left wondering whether you've submitted the form or need to click again. I built a JavaScript control core for that problem: permissions, stale pages and writes with unknown outcomes. The Chrome driver lives elsewhere.
 
-I wanted a few records. A reverse-engineering tool gave me 1.26 GB.
+**[Metric Integrity](https://github.com/Niyam-Paneru/metric-integrity)** — Four bookings out of 34 calls: 11.8%. Four out of 14 callers who wanted to book: 28.6%. Four appointments either way, but one of those numbers looks much happier on a slide. This Python module keeps track of what a metric actually measures. The calls are synthetic.
 
-Apparently, asking nicely was not enough. I wrote a streaming reader instead. In [one measured run](https://github.com/Niyam-Paneru/reastream/blob/main/docs/measurements/README.md), it read the full file and kept just 6.55 MB of relevant records.
+**[AI Booking Workflow](https://github.com/Niyam-Paneru/ai-booking-workflow)** — A receptionist offers 10 AM and 11 AM. The caller asks for 2 PM.
 
-My laptop and I are still on speaking terms.
+> **AI:** You're booked!  
+> **Calendar:** News to me.
 
-### [Attended Browser Bridge](https://github.com/Niyam-Paneru/attended-browser-bridge) — please stop clicking that button.
+A Python state machine that only creates a booking value for an offered and confirmed slot. No live calendar integration in this repo.
 
-An agent clicks Submit. Nothing happens. It clicks again. Somewhere, a backend engineer develops a new facial tic.
+## Other things I could have simply ignored
 
-This is the JavaScript control core that tracks permissions, stale page state and uncertain writes so the agent doesn't turn one timeout into two submissions. The actual Chrome driver isn't in this repo.
+| Project | How we got here |
+| --- | --- |
+| [Temporal Memory Core](https://github.com/Niyam-Paneru/temporal-memory-core) | I wanted an AI with a memory. I did not ask for time travel. It separates when a fact was true from when the system learned it. |
+| [Voice Pipeline Guard](https://github.com/Niyam-Paneru/voice-pipeline-guard) | A great voice response is less impressive when the caller hung up six seconds ago. Audio validation and timing checks. |
+| [Ubuntu Phone Compute Bridge](https://github.com/Niyam-Paneru/ubuntu-phone-compute-bridge) | My phone has a processor too. I thought it could help out. A Windows-to-phone job controller with result validation, not a hosted compute service. |
+| [Relic Zero](https://github.com/Niyam-Paneru/relic-zero) | Somewhere between one-use invitation tokens and state validation, a panda got involved. A game-rules prototype, not an audited security system. |
 
-### [AI Booking Workflow](https://github.com/Niyam-Paneru/ai-booking-workflow) — the calendar would like a word
+## And somehow I'm still working on these
 
-> **AI:** You're booked for 2 PM!  
-> **Calendar:** Am I?
+**Niyam-AI** is my private personal-AI project. I want it to remember the things that matter, learn from corrections and get better over time. The irony of building an assistant to help with my work and then spending so much of my time working on the assistant has not escaped me.
 
-A Python state machine that only creates a booking value when the caller selects and confirms a time that was actually offered. No invented availability. No live calendar integration, either.
+**DentSignal** is my private voice-receptionist and backend project. I published [the old Twilio chapter](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence) so you can inspect the historical telephony code. It's a sanitized extract, not the current application or a deployable receptionist.
 
-### [Metric Integrity](https://github.com/Niyam-Paneru/metric-integrity) — how to improve a KPI without doing any work
+## Languages I argue with
 
-Four bookings out of 34 calls: **11.8%**. Four bookings out of 14 booking-intent calls: **28.6%**.
+Python · TypeScript · JavaScript · Rust · C
 
-Same bookings. Different denominator. Someone's PowerPoint just got a promotion.
+And the usual suspects: FastAPI, Node.js, Playwright, PostgreSQL and React.
 
-I wrote a Python module to make metrics carry their population and evidence. Synthetic calls, not customer results. The numbers are allowed to be exciting; the claims still have to be true.
+C is particularly good at reminding me how much I took Python for granted.
 
-## Meanwhile, in the lab...
+---
 
-| Project | The problem I couldn't leave alone |
-| :--- | :--- |
-| [Temporal Memory Core](https://github.com/Niyam-Paneru/temporal-memory-core) | Teaching an assistant that finding something out on February 10 doesn't mean it knew on February 5. No time travel on my watch. |
-| [Voice Pipeline Guard](https://github.com/Niyam-Paneru/voice-pipeline-guard) | The world's most brilliant answer is surprisingly useless after the caller hangs up. Audio validation and timing gates. |
-| [Ubuntu Phone Compute Bridge](https://github.com/Niyam-Paneru/ubuntu-phone-compute-bridge) | Giving my phone a job other than displaying videos. A Windows-to-phone job controller with result checks, not a hosted compute service. |
-| [Relic Zero](https://github.com/Niyam-Paneru/relic-zero) | A secret invitation, one-use tokens and a panda. Yes, a panda. Rules prototype; the panda has not passed a security audit. |
+Some repositories are standalone projects; some are public pieces of larger private ones. I've tried to leave enough code and evidence in each to make it clear what's actually there.
 
-## The two projects I keep returning to
-
-**Niyam-AI** — My private personal-AI project. I want an assistant that remembers what matters, learns when I correct it and can say "I don't know" without experiencing an existential crisis. Still working on it.
-
-**DentSignal** — Private voice receptionist and backend work. The [old Twilio chapter](https://github.com/Niyam-Paneru/dentsignal-twilio-evidence) is public: sanitized historical telephony code, callbacks and number management. It's an exhibit, not a working public receptionist. Please do not ask the museum for an appointment.
-
-## My relationship with technology
-
-Python for getting things done. TypeScript when JavaScript needs adult supervision. FastAPI, Node.js, PostgreSQL, Playwright and React for building the actual things. Rust for negotiating with memory. C for when I miss negotiating with memory and would rather be personally responsible for it.
-
-## A small house rule
-
-Some of these repositories are small standalone tools; others are public slices of private work. I try to leave enough source, measurements and limitations for you to tell the difference.
-
-A passing test is nice. A reproducible result is better. A screenshot of a green checkmark is not a business model.
-
-Anyway, back to the bug.
+[Portfolio](https://niyampaneru.me/) · [More repositories](https://github.com/Niyam-Paneru?tab=repositories) · [Email](mailto:niyampaneru79@gmail.com)
